@@ -8,12 +8,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-        <header class="row">
-            <div>LOGO</div>
-            
-        </header>
-
   <body>
+  <div class="container">
+    <header class="row">
+        <div class="col-3">
+            LOGO
+        </div>
+        <div class="col-4">
+          spurting out unsolicited advice about enterpreneurship  
+        </div>
+        <div class="col-5">
+        <%= link_to 'contribute', '#' %>
+        <%= link_to 'About', '#' %>
+        </div>  
+    </header>
+  
+  
+    <br class= "clear" />
     <%= yield %>
+    </div>
   </body>
 </html>
