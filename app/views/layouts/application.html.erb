@@ -29,13 +29,38 @@
           spurting out unsolicited advice about enterpreneurship  
         </div>
         <div class="col-5 links">
-        <%= link_to 'Contribute', new_quote_path %>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Contribute
+    </button><span>&nbsp</span><span>&nbsp</span>
+        <%= link_to 'Contribute', new_quote_path %> <span>&nbsp</span><span>&nbsp</span>
         <%= link_to 'About', about_path %>
         </div>  
     </header>
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Modal Title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
   
     <hr />
-    
     <br class= "clear" />
     <div class="container">
     <% if flash[:error].present? %>
